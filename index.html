@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HY一点都不富文本编辑器</title>
+	<link rel="stylesheet" type="text/css" href="editor.css">
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="editor.js"></script>
+</head>
+<body>
+	<p>来自于一位受够了网上富文本编辑器过于囊肿难以扩展的朋友开发了这款编辑器！</p>
+	<ul>
+		<li>依赖jQuery</li>
+		<li>依赖HTML5 contenteditable</li>
+
+	</ul>
+	<p>引用</p>
+	<pre style="background: #DDD;padding: 10px;margin:0;line-height: 1.5">
+&lt;link rel="stylesheet" type="text/css" href="editor.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="icon/iconfont.css"&gt;
+&lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="editor.js"&gt;&lt;/script&gt;</pre>
+	<p>使用</p>
+<pre style="background: #DDD;padding: 10px;margin:0;white-space: pre-wrap;word-wrap: break-word;">
+&lt;div class="hy-editor-container" contenteditable="true"&gt;
+放个初始内容
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+	//初始编辑器方法1
+	var test = new HY_editor('.hy-editor',{
+		toolbar:'image justifyleft justifycenter justifyright | bold italic | underline strike blockquote orderedList unorderedList hr undo redo'
+	});
+	//初始编辑器方法2
+	var test1 = new HY_editor('#hy-editor',{
+		toolbar:'italic bold  underline strike blockquote orderedList unorderedList hr undo redo'
+	}); 
+&lt;/script&gt;
+</pre>
+
+<div id="editor" class="hy-editor" contenteditable="true">
+    <p>&nbsp;</p>
+</div>
+
+<script type="text/javascript">
+	var test = new HY_editor('.hy-editor',{
+		toolbar:'image justifyleft justifycenter justifyright | bold italic | underline strike blockquote orderedList unorderedList hr undo redo'
+	});
+	// var test1 = new HY_editor('#hy-editor',{
+	// 	toolbar:'italic bold  underline strike blockquote orderedList unorderedList hr undo redo'
+	// }); 
+</script>
+
+</body>
+</html>
